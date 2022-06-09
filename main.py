@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup
-import requests
+from earthquakealert_ID import getdata , displaydata
 
-
-def getdata():
-    pass
+if __name__ == '__main__' :
+    result = getdata ( )
+    displaydata ( result )
