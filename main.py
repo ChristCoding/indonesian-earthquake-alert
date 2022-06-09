@@ -1,5 +1,5 @@
-from earthquakealert_ID import getdata , displaydata
+import earthquakealert_ID
 
 if __name__ == '__main__' :
-    result = getdata ( )
-    displaydata ( result )
+    result = earthquakealert_ID.getdata ( )
+    earthquakealert_ID.displaydata ( result )
