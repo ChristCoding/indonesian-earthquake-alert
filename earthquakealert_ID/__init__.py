@@ -1,3 +1,5 @@
+import re
+
 from bs4 import BeautifulSoup
 import requests
 
@@ -24,19 +26,14 @@ def getdata() :
         return hasil
 
 
-"""
-08 Juni 2022, 21:25:20 WIB
-2.5
-10 km
-3.26 LS - 128.34 BT
-Pusat gempa berada di darat 9 km utara Kairatu
-Dirasakan (Skala MMI): II Kairatu
-"""
-
-
-def displaydata(result) :
+def displaydata(result: object)  -> object:
     if result == None :
         print ( 'url not found' )
     else:
         print (f'Latest Earthquake News in Indonesia' )
-
+        print(f"Date: {result['date']}")
+        print ( f"Time: {result['time']}" )
+        print ( f"Magnitude: {result['magnitude']}" )
+        print ( f"Location: LS: {result['location']['ls']} BT: {result['location']['bt']}" )
+        print ( f"Center: {result['center']}" )
+        print ( f"Impact Scale: {result['impact scale']}" )
