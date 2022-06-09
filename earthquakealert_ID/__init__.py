@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-class EarthquakeAlert_ID:
-    def __init__(self):
+
 def getdata() :
     try :
         content = requests.get ( 'https://www.bmkg.go.id/' )
